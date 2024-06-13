@@ -1,0 +1,2 @@
+{{- define "adp-dotnet-test1.container" -}}
+{{- end -}}

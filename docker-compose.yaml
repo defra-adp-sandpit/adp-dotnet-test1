@@ -1,0 +1,13 @@
+services:
+  ? adp-dotnet-test1
+  : build:
+      context: .
+      target: production
+    image: adp-dotnet-test1
+    container_name: adp-dotnet-test1
+    depends_on:
+      - adp-dotnet-test1-postgres
+    environment:
+      APPINSIGHTS_CLOUDROLE: adp-dotnet-test1-local
+      APPINSIGHTS_CONNECTIONSTRING: ${APPINSIGHTS_CONNECTIONSTRING}
+
